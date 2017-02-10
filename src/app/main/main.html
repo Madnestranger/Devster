@@ -1,0 +1,168 @@
+<div class="container customContainer">
+  <div class="loading" ng-if="main.loaded">
+    <span>All users were successfully downloaded!</span>
+  </div>
+  <div class="userContainer">
+    <div class="searchBox">
+      <input type="text" ng-model="main.searchParam" placeholder="Search: ">
+      <label for="orderBy">Order users by: </label>
+      <select name="" id="orderBy" ng-model="main.orderParam" class="form-control">
+        <option value="name">name</option>
+        <option value="-name">descending name</option>
+        <option value="username">username</option>
+        <option value="-username">descending username</option>
+        <option value="email">email</option>
+        <option value="-email">descending email</option>
+        <option value="address.street">street</option>
+        <option value="-address.street">descending street</option>
+        <option value="company.name">company name</option>
+        <option value="-company.name">descending company name</option>
+      </select>
+      <label for="descending">Ascending\descending: </label>
+      <select name="" id="descending" ng-model="main.descending" ng-change="main.changeSort()" class="form-control">
+        <option value="ascending">ascending</option>
+        <option value="descending">descending</option>
+      </select>
+    </div>
+    <div class="user" ng-repeat="user in main.users | userFilter: main.searchParam | orderBy: main.orderParam "
+         ng-click="main.handleUserClick(user, $index)" data-toggle="modal" data-target="#addUserModal">
+      <div class="self-info">
+        <div class="name">
+          <span class="title">Name: </span>
+          <span class="value">
+          {{user.name}}
+          </span>
+        </div>
+        <div class="phone">
+          <span class="title">Phone: </span>
+          <span class="value">
+          {{user.phone}}
+          </span></div>
+        <div class="website">
+          <span class="title">Website: </span>
+          <span class="value">
+          {{user.website}}
+          </span></div>
+        <div class="username">
+          <span class="title">Username: </span>
+          <span class="value">
+          {{user.username}}
+          </span></div>
+        <div class="email"><span id="{{user.username}}">
+        <span class="title">Email: </span>
+          <span class="value">
+          {{user.email}}
+          </span>
+        </span>
+          <button class="btn btn-default" data-clipboard-target="#{{user.username}}">Copy</button>
+        </div>
+      </div>
+      <div class="company-info">
+        <div class="companyName">
+          <span class="title">Company Name: </span>
+          <span class="value">
+          {{user.company.name}}
+          </span></div>
+        <div class="companyPhrase">
+          <span class="title">Company phrase: </span>
+          <span class="value">
+         {{user.company.catchPhrase}}
+          </span></div>
+        <div class="companyBs">
+          <span class="title">Company smth: </span>
+          <span class="value">
+          {{user.company.bs}}
+          </span></div>
+      </div>
+      <div class="geo-info">
+        <div class="city">
+          <span class="title">City: </span>
+          <span class="value">
+         {{user.address.city}}
+          </span></div>
+        <div class="street">
+          <span class="title">Street: </span>
+          <span class="value">
+          {{user.address.street}}
+          </span></div>
+        <div class="zipcode">
+          <span class="title">Zip code: </span>
+          <span class="value">
+          {{user.address.zipcode}}
+          </span></div>
+        <div class="suite">
+          <span class="title">Suite: </span>
+          <span class="value">
+         {{user.address.suite}}
+          </span></div>
+        <div class="distance">
+          <span class="title">Distance from current location: </span>
+          <span class="value">
+         {{main.calculateDistance(user.address.geo.lat, user.address.geo.lng, main.currentCoordinates.lat, main.currentCoordinates.lon) | number: 2}} km
+          </span></div>
+      </div>
+    </div>
+    <div class="user">
+      <div class="addUser" data-toggle="modal" data-target="#addUserModal"><i class="glyphicon glyphicon-plus"></i>
+        <span> Add user</span></div>
+    </div>
+  </div>
+  <div id="addUserModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add User</h4>
+        </div>
+        <div class="modal-body">
+          <form name="addUserForm">
+            <label for="name">Name: (required)</label>
+            <input type="text" name="name" id="name" ng-model="main.newUser.name" required="true">
+            <label for="username">Username: (required)</label>
+            <input type="text" name="username" id="username" ng-model="main.newUser.username" required="true">
+            <div class="error" ng-if="main.error.username">This username is already exist!</div>
+            <label for="email">Email: (required)</label>
+            <input type="email" name="email" id="email" ng-model="main.newUser.email" required="true">
+            <div class="error" ng-if="main.error.email">This email is already exist!</div>
+            <label for="phone">Phone: (required)</label>
+            <input type="tel" name="phone" id="phone" ng-model="main.newUser.phone" ng-pattern="/^[().+,\d- x]+$/" maxlength="20" minlength="7"
+                   required="true">
+            <div class="error" ng-if="addUserForm.phone.$error.pattern">Invalid phone!</div>
+            <label for="website">Website: (required)</label>
+            <input type="" name="website" id="website" ng-model="main.newUser.website"
+                   ng-pattern="/^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/" required="true">
+            <div class="error" ng-if="addUserForm.website.$error.pattern">Invalid url!</div>
+            <label for="companyName">Company name: (required)</label>
+            <input type="text" name="companyName" id="companyName" ng-model="main.newUser.company.name" required="true">
+            <div class="error" ng-if="main.error.companyName">This company name is already exist!</div>
+            <label for="companyPhrase">Company phrase: </label>
+            <input type="text" name="companyPhrase" id="companyPhrase" ng-model="main.newUser.company.catchPhrase">
+            <label for="companyBs">Company bs: </label>
+            <input type="text" name="companyBs" id="companyBs" ng-model="main.newUser.company.bs">
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city" ng-model="main.newUser.address.city">
+            <label for="street">Street: </label>
+            <input type="text" name="street" id="street" ng-model="main.newUser.address.street">
+            <label for="zipCode">Zip code: </label>
+            <input type="text" name="zipCode" id="zipCode" ng-model="main.newUser.address.zipcode">
+            <label for="suite">Suite: </label>
+            <input type="text" name="suite" id="suite" ng-model="main.newUser.address.suite">
+            <label for="latitude">Coordinate | latitude: </label>
+            <input type="text" name="latitude" id="latitude" ng-model="main.newUser.address.geo.lat">
+            <label for="longitude">Coordinate | longitude: </label>
+            <input type="text" name="longitude" id="longitude" ng-model="main.newUser.address.geo.lng">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" ng-click="main.deleteUser()"
+                  ng-if="main.newUser.orderIndex || main.newUser.orderIndex == 0" data-dismiss="modal">Delete user
+          </button>
+          <button class="btn btn-default" ng-click="main.addUser(main.newUser)" ng-disabled="addUserForm.$invalid"
+                  ng-if="!main.newUser.orderIndex && main.newUser.orderIndex != 0">Add
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+.customContainer {
+  position: relative;
+  .loading {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 20%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    opacity: .8;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .userContainer {
+    .searchBox {
+      padding: 20px 0;
+      input {
+        border: 1px solid rgba(0,0,0,.3);
+        border-radius: 4px;
+        padding: 5px;
+        margin-right: 20px;
+      }
+      select {
+        width: 20%;
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+    .user {
+      display: flex;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: aliceblue;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      outline: none;
+      .addUser {
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        cursor: pointer;
+      }
+      .title {
+        color: rgba(0,0,0, .5);
+      }
+      .value {
+        color: rgba(0,0,0, .9);
+
+      }
+      .self-info {
+        flex-basis: 40%;
+        & > div {
+          margin-bottom: 10px;
+        }
+        .name {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .email {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-right: 10px;
+        }
+      }
+      .company-info {
+        flex-basis: 30%;
+        & > div {
+          margin-bottom: 10px;
+        }
+      }
+      .geo-info {
+        flex-basis: 30%;
+        & > div {
+          margin-bottom: 10px;
+        }
+      }
+      &:hover {
+        background-color: #bab3ff;
+      }
+    }
+  }
+  #addUserModal {
+    .modal-body {
+      form {
+        display: flex;
+        flex-direction: column;
+        .error {
+          color: red;
+          font-size: 15px;
+          padding: 10px 0;
+        }
+        input {
+          border: 1px solid rgba(0,0,0,.3);
+          border-radius: 4px;
+          padding: 5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
