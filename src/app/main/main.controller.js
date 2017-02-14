@@ -1,8 +1,9 @@
 export class MainController {
-  constructor($http, $timeout, $scope) {
+  constructor($http, $timeout, $scope, api) {
     'ngInject';
     this.$http = $http;
     this.$timeout = $timeout;
+    this.api = api;
     this.$scope = $scope;
     this.error = {};
     this.descending = 'ascending';
@@ -107,8 +108,8 @@ export class MainController {
   }
 
   getUsers() {
-    this.$http
-      .get(`https://jsonplaceholder.typicode.com/users`)
+    this.api
+      .get(`users`)
       .then(response => {
         this.users = response.data;
         console.log(response.data);
