@@ -28,6 +28,14 @@ export class MainController {
     this.clearUser();
   }
 
+  changeOrderEvent(param) {
+    if (param.indexOf('-') != -1) {
+      this.descending = 'descending';
+    } else {
+      this.descending = 'ascending';
+    }
+  }
+
   changeSort() {
     if (this.orderParam.indexOf('-') == -1) {
       this.orderParam = '-' + this.orderParam;
@@ -46,7 +54,7 @@ export class MainController {
   }
 
   deleteUser() {
-    this.users.splice(this.newUser.orderIndex, 1);
+    this.users.splice(this.users.indexOf(this.newUser), 1);
   }
 
   toRadians(val) {

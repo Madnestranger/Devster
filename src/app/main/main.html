@@ -6,7 +6,7 @@
     <div class="searchBox">
       <input type="text" ng-model="main.searchParam" placeholder="Search: ">
       <label for="orderBy">Order users by: </label>
-      <select name="" id="orderBy" ng-model="main.orderParam" class="form-control">
+      <select name="" id="orderBy" ng-model="main.orderParam" ng-change="main.changeOrderEvent(main.orderParam)" class="form-control">
         <option value="name">name</option>
         <option value="-name">descending name</option>
         <option value="username">username</option>
