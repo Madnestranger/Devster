@@ -103,66 +103,9 @@
       </div>
     </div>
     <div class="user">
-      <div class="addUser" data-toggle="modal" data-target="#addUserModal"><i class="glyphicon glyphicon-plus"></i>
+      <div class="addUser" data-toggle="modal" data-target="#addUserModal" ng-click="main.handleAddUserClick()"><i class="glyphicon glyphicon-plus"></i>
         <span> Add user</span></div>
     </div>
   </div>
-  <div id="addUserModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Add User</h4>
-        </div>
-        <div class="modal-body">
-          <form name="addUserForm">
-            <label for="name">Name: (required)</label>
-            <input type="text" name="name" id="name" ng-model="main.newUser.name" required="true">
-            <label for="username">Username: (required)</label>
-            <input type="text" name="username" id="username" ng-model="main.newUser.username" required="true">
-            <div class="error" ng-if="main.error.username">This username is already exist!</div>
-            <label for="email">Email: (required)</label>
-            <input type="email" name="email" id="email" ng-model="main.newUser.email" required="true">
-            <div class="error" ng-if="main.error.email">This email is already exist!</div>
-            <label for="phone">Phone: (required)</label>
-            <input type="tel" name="phone" id="phone" ng-model="main.newUser.phone" ng-pattern="/^[().+,\d- x]+$/" maxlength="20" minlength="7"
-                   required="true">
-            <div class="error" ng-if="addUserForm.phone.$error.pattern">Invalid phone!</div>
-            <label for="website">Website: (required)</label>
-            <input type="" name="website" id="website" ng-model="main.newUser.website"
-                   ng-pattern="/^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/" required="true">
-            <div class="error" ng-if="addUserForm.website.$error.pattern">Invalid url!</div>
-            <label for="companyName">Company name: (required)</label>
-            <input type="text" name="companyName" id="companyName" ng-model="main.newUser.company.name" required="true">
-            <div class="error" ng-if="main.error.companyName">This company name is already exist!</div>
-            <label for="companyPhrase">Company phrase: </label>
-            <input type="text" name="companyPhrase" id="companyPhrase" ng-model="main.newUser.company.catchPhrase">
-            <label for="companyBs">Company bs: </label>
-            <input type="text" name="companyBs" id="companyBs" ng-model="main.newUser.company.bs">
-            <label for="city">City: </label>
-            <input type="text" name="city" id="city" ng-model="main.newUser.address.city">
-            <label for="street">Street: </label>
-            <input type="text" name="street" id="street" ng-model="main.newUser.address.street">
-            <label for="zipCode">Zip code: </label>
-            <input type="text" name="zipCode" id="zipCode" ng-model="main.newUser.address.zipcode">
-            <label for="suite">Suite: </label>
-            <input type="text" name="suite" id="suite" ng-model="main.newUser.address.suite">
-            <label for="latitude">Coordinate | latitude: </label>
-            <input type="text" name="latitude" id="latitude" ng-model="main.newUser.address.geo.lat">
-            <label for="longitude">Coordinate | longitude: </label>
-            <input type="text" name="longitude" id="longitude" ng-model="main.newUser.address.geo.lng">
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-default" ng-click="main.deleteUser()"
-                  ng-if="main.newUser.orderIndex || main.newUser.orderIndex == 0" data-dismiss="modal">Delete user
-          </button>
-          <button class="btn btn-default" ng-click="main.addUser(main.newUser)" ng-disabled="addUserForm.$invalid"
-                  ng-if="!main.newUser.orderIndex && main.newUser.orderIndex != 0">Add
-          </button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div ng-include="'/app/templates/userModal.html'"></div>
 </div>

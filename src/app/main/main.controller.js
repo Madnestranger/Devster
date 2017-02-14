@@ -14,8 +14,6 @@ export class MainController {
     function getLocation(that) {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition.bind(that));
-      } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
       }
     }
 
@@ -28,11 +26,6 @@ export class MainController {
     getLocation(this);
     this.getUsers();
     this.clearUser();
-
-    $("#addUserModal").on('hidden.bs.modal', () => {
-      this.clearUser();
-      this.$scope.$digest();
-    });
   }
 
   changeSort() {
@@ -46,6 +39,10 @@ export class MainController {
   handleUserClick(user, index) {
     this.newUser = user;
     this.newUser.orderIndex = index;
+  }
+
+  handleAddUserClick() {
+    this.clearUser();
   }
 
   deleteUser() {
@@ -112,7 +109,6 @@ export class MainController {
       .get(`users`)
       .then(response => {
         this.users = response.data;
-        console.log(response.data);
         this.loaded = true;
         this.$timeout(() => {
           this.loaded = false;
