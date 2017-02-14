@@ -15,7 +15,7 @@
           <label for="email">Email: (required)</label>
           <input type="email" name="email" id="email" ng-model="main.newUser.email" required="true">
           <div class="error" ng-if="main.error.email">This email is already exist!</div>
-          <label for="phone">Phone: (required)</label>
+          <label for="phone">Phone: (required, min 7 symbols)</label>
           <input type="tel" name="phone" id="phone" ng-model="main.newUser.phone" ng-pattern="/^[().+,\d- x]+$/" maxlength="20" minlength="7"
                  required="true">
           <div class="error" ng-if="addUserForm.phone.$error.pattern">Invalid phone!</div>
