@@ -3,6 +3,7 @@ import '../../bower_components/clipboard/dist/clipboard.min';
 
 import { routerConfig } from './index.route';
 import { MainController } from './main/main.controller';
+import { TemplateController } from './template/template.ctrl';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 
 import { UserFilter } from './filters/userFilter';
@@ -15,4 +16,5 @@ angular.module('testTaskDevLabs', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanit
   .service('api', DevsterApi)
   .filter('userFilter', UserFilter)
   .controller('MainController', MainController)
+  .controller('TemplateController', TemplateController)
   .directive('acmeNavbar', NavbarDirective);
