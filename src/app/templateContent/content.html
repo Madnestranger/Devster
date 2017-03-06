@@ -48,8 +48,8 @@
       </div>
     </div>
     <div class="additionalMenu">
-      <div ui-sref="template" class="active">APPEARANCE</div>
-      <div ui-sref="templateContent">CONTENT</div>
+      <div ui-sref="template">APPEARANCE</div>
+      <div ui-sref="templateContent" class="active">CONTENT</div>
       <div ui-sref="templateSuccess">SUCCESS</div>
       <div ui-sref="templateBehavior">BEHAVIOR & TARGETING
         RULES
@@ -63,35 +63,99 @@
   <div class="bodyCust">
     <div class="settings">
       <div class="item">
-        <div class="title">Position</div>
+        <div class="title">Title</div>
         <div class="value">
-          <div class="positions">
-            <div class="kl-center-modal-btn active" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.offerOn = !ctrl.offerOn;"></div>
-            <div class="kl-bottom-left-modal-btn" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.leftBlock = !ctrl.leftBlock; ctrl.needRight = false;"></div>
-            <div class="kl-bottom-right-modal-btn" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.leftBlock = !ctrl.leftBlock; ctrl.needRight = true;"></div>
-            <div class="kl-top-modal-btn" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.fullwidth = !ctrl.fullwidth; ctrl.topPositionOfBar = true;"></div>
-            <div class="kl-bottom-modal-btn" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.fullwidth = !ctrl.fullwidth; ctrl.topPositionOfBar = false;"></div>
-            <div class="kl-left-modal-btn" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.leftBarVisible = !ctrl.leftBarVisible; ctrl.rightPositionBar = false;"></div>
-            <div class="kl-right-modal-btn" data-toggle="tooltip" data-placement="bottom" ng-click="ctrl.rightPositionBar = true; ctrl.leftBarVisible = !ctrl.leftBarVisible;"></div>
+          <input type="text" value="Thank you!" class="inputFull">
+        </div>
+      </div>
+      <div class="item messageInputBox" onclick="$('.noBorder').focus();" ng-if="currentPage == 'success'">
+        <div class="messageHeaderButtons">
+          <select name="" id="magic" style="margin-right: 5px;">
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+          </select>
+          <button class="btn btn-default">B</button>
+          <button class="btn btn-default" style="text-decoration: underline;">U</button>
+          <button class="btn btn-default" style="margin-right: 5px;"><span class="glyphicon glyphicon-erase"></span>
+          </button>
+          <select name="" id="font" style="margin-right: 5px;">
+            <option value="">Helvetica</option>
+            <option value="">Times New Roman</option>
+            <option value="">Verdana</option>
+          </select>
+          <select name="" id="size" style="margin-right: 5px;">
+            <option value="">A</option>
+            <option value="">A</option>
+            <option value="">A</option>
+          </select>
+          <button class="btn btn-default"><span class="glyphicon glyphicon-list"></span></button>
+          <button class="btn btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
+          <button class="btn btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
+        </div>
+        <div class="messageTextBox">
+          <input type="text" class="noBorder">
+        </div>
+      </div>
+
+      <div class="item radioBlock">
+        <div class="title">CHOOSE FIELDS</div>
+        <div class="value">
+          <input name="set" type="radio" id="email">
+          <label for="email"><span class="round"><i class="glyphicon glyphicon-ok"></i></span>Email</label>
+          <input name="set" type="radio" id="name">
+          <label for="name"><span class="round"><i class="glyphicon glyphicon-ok"></i></span>Name</label>
+          <input name="set" type="radio" id="phone">
+          <label for="phone"><span class="round"><i class="glyphicon glyphicon-ok"></i></span>Phone</label>
+        </div>
+      </div>
+      <div class="item mainTitle">
+        <div class="title">
+          MAIN TITLE
+        </div>
+        <div class="value">
+          <input type="text" value="Wait, we have a special offer!">
+        </div>
+      </div>
+      <div class="item subTitle">
+        <div class="title">
+          SUB TITLE
+        </div>
+        <div class="value">
+          <input type="text" value="Enter your email and get 15% off!">
+        </div>
+      </div>
+      <div class="item flex fourItems">
+        <div class="item">
+          <div class="title">
+            EMAIL PLACEHOLDER
+          </div>
+          <div class="value">
+            <input type="text" value="Enter email address here">
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="title">Widget size</div>
-        <div class="value">
-          <div class="size"><input type="text" value="555px"></div>
-          <div class="size"><input type="text" value="215px"></div>
+        <div class="item left">
+          <div class="title">
+            BUTTON PLACEHOLDER
+          </div>
+          <div class="value">
+            <input type="text" value="SEND MY 15% OFF NOW">
+          </div>
         </div>
-      </div>
-      <div class="item flex">
         <div class="item">
-          <div class="title"><span>Widget background color</span></div>
-          <div class="value"><p class="value"><span class="color"></span> #df2d24</p></div>
+          <div class="title">
+            BOTTOM TEXT
+          </div>
+          <div class="value">
+            <input type="text" value="No, thanks. I don't like free gifts.">
+          </div>
         </div>
-        <div class="item browse">
-          <div class="title"><span>Widget background image</span></div>
-          <div class="value"><img src="app/template/input-bordered.png" alt="alt">
-            <button>Browse</button>
+        <div class="item left">
+          <div class="title">
+            CLOSE TEXT
+          </div>
+          <div class="value">
+            <input type="text" value="Esc">
           </div>
         </div>
       </div>
@@ -118,18 +182,6 @@
           </p>
         </div>
       </div>
-      <div class="item">
-        <div class="title">Font</div>
-        <div class="value">
-          <input type="text" class="fullwidth" value="Helvetica Neue, Helvetica, Arial, sans-serif">
-        </div>
-      </div>
-      <div class="item">
-        <div class="title">Show off animation</div>
-        <div class="value">
-          <input type="text" class="fullwidth" value="Fade down from top">
-        </div>
-      </div>
     </div>
     <div class="view">
       <div class="header">
@@ -153,7 +205,7 @@
           <img src="app/template/mobile.png" alt="alt">
           <img src="app/template/desktop.png" alt="alt">
         </div>
-        <div class="message" ng-if="ctrl.leftBlock"
+        <div class="message" ng-if="ctrl.leftBlock && currentPage == 'appearance'"
              ng-class="{'needRight': ctrl.needRight}">
           <div class="messCont">
             <div class="messheader">
@@ -177,7 +229,7 @@
 
         </div>
         <div class="message fullwidthDiv" ng-class="{'needTopPosition': ctrl.topPositionOfBar}"
-             ng-if="ctrl.fullwidth">
+             ng-if="ctrl.fullwidth && currentPage == 'appearance'">
           <div class="messCont">
             <div class="messheader">
               <span class="text">Amsterdam Exclusive offers</span>
@@ -192,11 +244,11 @@
             </div>
           </div>
         </div>
-        <div class="leftBar" ng-if="ctrl.leftBarVisible"
+        <div class="leftBar" ng-if="ctrl.leftBarVisible && currentPage == 'appearance'"
              ng-class="{'needRightPosition': ctrl.rightPositionBar}">
           <span>Exclusive offers</span>
         </div>
-        <div class="offer" ng-if="ctrl.offerOn">
+        <div class="offer" ng-if="ctrl.offerOn && currentPage == 'appearance'">
           <div class="offerCont">
             <div class="offerHeader">
               Wait, we have special offer!
@@ -217,6 +269,26 @@
             </div>
             <div class="closeBtn">
               <i class="glyphicon glyphicon-remove"></i>
+            </div>
+          </div>
+        </div>
+        <div class="thankYou" ng-if="currentPage == 'success'">
+          <div class="thanksContainer">
+            <div class="image">
+              <img src="app/template/thank-image.png" alt="">
+            </div>
+            <div class="text">
+              <div class="textHeader">
+                <div>Thank you!</div>
+              </div>
+              <div class="textBody">
+                <div>
+                  Your discount code will be in your email within a few minutes.
+                </div>
+              </div>
+              <div class="textFooter">
+                <button class="btnRed">Close window</button>
+              </div>
             </div>
           </div>
         </div>

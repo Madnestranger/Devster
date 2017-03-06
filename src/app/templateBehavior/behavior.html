@@ -1,0 +1,356 @@
+<div class="customContainer">
+  <div class="headerCust">
+    <div class="header">
+      <div class="menu">
+        <a href="#" class="active">My Campaigns</a>
+        <a href="#">A/B Testing</a>
+        <a href="#">Statistics</a>
+        <a href="#">Leads</a>
+      </div>
+      <div class="user">
+        <a href="#" class="kl-user-btn">
+          <img src="app/template/default-profile.png" alt="image">
+          <span class="kl-user-name">Guy Lev</span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </a>
+        <ul class="kl-user-list">
+          <li>
+            <a href="#">My account</a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Messages</span>
+              <span class="kl-messages-quantity">12</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">Notifications</a>
+          </li>
+          <li>
+            <a href="#">Privacy</a>
+          </li>
+          <li>
+            <a href="#">Billing</a>
+          </li>
+          <li>
+            <a href="#">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="logoAndBut">
+      <div class="logo">
+        <img src="app/template/Logo.png" alt="logo">
+      </div>
+      <div class="buttons">
+        <button class="succes-btn">SAVE AND PROCEED</button>
+        <button class="default-btn">BACK</button>
+      </div>
+    </div>
+    <div class="additionalMenu">
+      <div ui-sref="template">APPEARANCE</div>
+      <div ui-sref="templateContent">CONTENT</div>
+      <div ui-sref="templateSuccess">SUCCESS</div>
+      <div ui-sref="templateBehavior" class="active">BEHAVIOR & TARGETING
+        RULES
+      </div>
+      <div ui-sref="templateIntegrations">
+        INTEGRATIONS
+      </div>
+      <div ui-sref="templateAutomation">AUTOMATION</div>
+    </div>
+  </div>
+  <div class="bodyCust">
+    <div class="kl-settings-total-block">
+
+      <div class="kl-settings-block">
+        <div class="kl-settings-title">
+          <span class="kl-settings-title__name">BASIC SETTINGS</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        <div class="kl-settings-content">
+          <div class="kl-settings-content-block">
+            <p>Apply campaign for whole site</p>
+            <input class="kl-settings-content-block__input width560" type="text" name="name" placeholder="http://www.kicklander.com">
+          </div>
+          <div class="kl-settings-content-block">
+            <p>or apply for some pages</p>
+            <div class="kl-settings-content-url-block">
+              <span>url</span>
+              <div class="kl-settings-drop-block">
+                <input class="kl-settings-drop-input" type="hidden" name="name">
+                <button class="kl-settings-drop-button">
+                  <span class="kl-settings-drop-button-name">Contains</span>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <div class="kl-settings-drop-down-block">
+                  <label>
+                    <input type="radio" name="url" value="1">
+                    <span>Contains</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="url" value="2">
+                    <span>Contains 2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="url" value="3">
+                    <span>Contains 3</span>
+                  </label>
+                </div>
+              </div>
+              <input class="kl-settings-content-block__input width560" type="text" name="name" placeholder="http://www.kicklander.com">
+              <button class="kl-settings-content-block__remove">Remove</button>
+            </div>
+            <button class="kl-settings-content-block__add">
+              <span class="glyphicon glyphicon-plus"></span>
+              <span>Add url</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="kl-settings-block">
+        <div class="kl-settings-title">
+          <span class="kl-settings-title__name">Campaign show off</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        <div class="kl-settings-content">
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">Schedule campaign by date range</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <span class="kl-settings-content-block__date-span">from:</span>
+              <input class="kl-settings-content-block__date-input" type="text" name="from" placeholder="00/00/0000">
+              <span class="kl-settings-content-block__date-span">to:</span>
+              <input class="kl-settings-content-block__date-input" type="text" name="to" placeholder="00/00/0000">
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">Show on exit</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <p>Please note that mobile & tablet campaigns should have delay or scrolling target instead of exit intend.</p>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">After ‘X’ Second(s)</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <span class="kl-settings-content-block__time-span">Campaign will appear after delay of</span>
+              <input class="kl-settings-content-block__time-input width70" type="text" name="time" placeholder="5">
+              <span class="kl-settings-content-block__time-span">second(s).</span>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">After scrolling up ‘X’ percent</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <span class="kl-settings-content-block__time-span">When a user scrolls</span>
+              <input class="kl-settings-content-block__scrolling-input width70" type="text" name="scrolling" placeholder="0">
+              <span class="kl-settings-content-block__time-span">% up the page</span>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">After scrolling down ‘X’ percent</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <span class="kl-settings-content-block__time-span">When a user scrolls</span>
+              <input class="kl-settings-content-block__scrolling-input width70" type="text" name="scrolling" placeholder="0">
+              <span class="kl-settings-content-block__time-span">% down the page</span>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">Special Link</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <p>Campaign will appear after user clicking on specific CSS element</p>
+              <span class="kl-settings-content-block__time-span">CSS Selector</span>
+              <input class="kl-settings-content-block__selector-input" type="text" name="selector">
+              <p>Visitor can click on a button, image or some part of the page and show off your campaign by this feature.</p>
+              <p class="kl-settings-content-block__bold-text">For example:</p>
+              <p>Clicking on CSS class “<span class="kl-settings-content-block__red-text">.banner</span>”</p>
+              <p>Clicking on CSS id “<span class="kl-settings-content-block__red-text">#banner</span>”</p>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">Impression Frequency</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <div class="kl-settings-drop-block kl-settings-frequency-block">
+                <input class="kl-settings-drop-input" type="hidden" name="name">
+                <button class="kl-settings-drop-button">
+                  <span class="kl-settings-drop-button-name">Everyday for the same visitor</span>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <div class="kl-settings-drop-down-block">
+                  <label>
+                    <input type="radio" name="frequency" value="1">
+                    <span>Everyday for the same visitor</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="frequency" value="2">
+                    <span>Everyday for the same visitor 2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="frequency" value="3">
+                    <span>Everyday for the same visitor 3</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="kl-settings-block">
+        <div class="kl-settings-title">
+          <span class="kl-settings-title__name">What visitors</span>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        <div class="kl-settings-content">
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">Returning or new visitors</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <div class="kl-settings-drop-block kl-settings-visitors-block">
+                <input class="kl-settings-drop-input" type="hidden" name="name">
+                <button class="kl-settings-drop-button">
+                  <span class="kl-settings-drop-button-name">All visitors</span>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <div class="kl-settings-drop-down-block">
+                  <label>
+                    <input type="radio" name="visitors" value="1">
+                    <span>All visitors</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="visitors" value="2">
+                    <span>All visitors 2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="visitors" value="3">
+                    <span>All visitors 3</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">Show campaign if visitor visited ‘x’ pages</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <span class="kl-settings-content-block__time-span">Visitor opened at least</span>
+              <div class="kl-settings-content-label-block kl-settings-content-pages-block">
+                <div class="kl-settings-drop-block kl-settings-pages-block">
+                  <input class="kl-settings-drop-input" type="hidden" name="name">
+                  <button class="kl-settings-drop-button">
+                    <span class="kl-settings-drop-button-name">Any</span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </button>
+                  <div class="kl-settings-drop-down-block">
+                    <label>
+                      <input type="radio" name="pages" value="1">
+                      <span>Any</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="pages" value="2">
+                      <span>Any 2</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="pages" value="3">
+                      <span>Any 3</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <span class="kl-settings-content-block__time-span">pages</span>
+            </div>
+          </div>
+
+          <div class="kl-settings-content-block">
+            <div class="kl-settings-content-label">
+              <span class="round">
+                <i class="glyphicon glyphicon-ok"></i>
+              </span>
+              <span class="kl-settings-content-label__text">DEVICE TYPE</span>
+            </div>
+            <div class="kl-settings-content-label-block">
+              <div class="kl-settings-drop-block kl-settings-devices-block">
+                <input class="kl-settings-drop-input" type="hidden" name="name">
+                <button class="kl-settings-drop-button">
+                  <span class="kl-settings-drop-button-name">All devices</span>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <div class="kl-settings-drop-down-block">
+                  <label>
+                    <input type="radio" name="devices" value="1">
+                    <span>All devices</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="devices" value="2">
+                    <span>All devices 2</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="devices" value="3">
+                    <span>All devices 3</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer">
+    <span>Kicklander &reg;</span>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-export function routerConfig ($stateProvider, $urlRouterProvider) {
+export function routerConfig($stateProvider, $urlRouterProvider) {
   'ngInject';
   $stateProvider
     .state('home', {
@@ -10,6 +10,36 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
     .state('template', {
       url: '/template',
       templateUrl: 'app/template/template.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
+    .state('templateSuccess', {
+      url: '/template/success',
+      templateUrl: 'app/templateSuccess/success.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
+    .state('templateContent', {
+      url: '/template/content',
+      templateUrl: 'app/templateContent/content.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
+    .state('templateBehavior', {
+      url: '/template/behavior',
+      templateUrl: 'app/templateBehavior/behavior.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
+    .state('templateAutomation', {
+      url: '/template/automation',
+      templateUrl: 'app/templateAutomation/automation.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
+    .state('templateIntegrations', {
+      url: '/template/integrations',
+      templateUrl: 'app/templateIntegrations/integrations.html',
       controller: 'TemplateController',
       controllerAs: 'ctrl'
     });
