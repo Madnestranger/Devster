@@ -1,10 +1,10 @@
 <acme-navbar creation-date="main.creationDate"></acme-navbar>
-<div class="container customContainer">
-  <div class="loading" ng-if="main.loaded">
+<div class="container kl-customContainer">
+  <div class="kl-loading" ng-if="main.loaded">
     <span>All users were successfully downloaded!</span>
   </div>
-  <div class="userContainer">
-    <div class="searchBox">
+  <div class="kl-userContainer">
+    <div class="kl-searchBox">
       <input type="text" ng-model="main.searchParam" placeholder="Search: ">
       <label for="orderBy">Order users by: </label>
       <select name="" id="orderBy" ng-model="main.orderParam" ng-change="main.changeOrderEvent(main.orderParam)" class="form-control">
@@ -58,7 +58,7 @@
           <button class="btn btn-default" data-clipboard-target="#{{user.username}}">Copy</button>
         </div>
       </div>
-      <div class="company-info">
+      <div class="kl-company-info">
         <div class="companyName">
           <span class="title">Company Name: </span>
           <span class="value">
@@ -75,7 +75,7 @@
           {{user.company.bs}}
           </span></div>
       </div>
-      <div class="geo-info">
+      <div class="kl-geo-info">
         <div class="city">
           <span class="title">City: </span>
           <span class="value">

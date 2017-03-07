@@ -1,4 +1,7 @@
-.customContainer {
+.kl-customContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
   * {
     outline: none;
@@ -24,9 +27,8 @@
     padding: 10px;
     color: #fff;
   }
-  .headerCust {
-    z-index: 0;
-    .header {
+  .kl-headerCust {
+    .kl-header {
       position: relative;
       z-index: 1;
       padding: 10px 10vw;
@@ -34,7 +36,7 @@
       font-family: 'Montserrat', sans-serif;
       display: flex;
       justify-content: space-between;
-      .menu {
+      .kl-menu {
         color: #9ca3ad;
         a {
           margin-right: 15px;
@@ -119,28 +121,30 @@
         }
       }
     }
-    .logoAndBut {
+    .kl-logoAndBut {
       padding: 10px 10vw;
       margin-top: 20px;
       display: flex;
+      position: relative;
       justify-content: space-between;
       align-items: center;
-      .logo {
+      min-height: 62px;
+      .kl-logo {
 
       }
-      .buttons {
+      .kl-buttons {
         button {
           border-radius: 21px;
           height: 42px;
           border: none;
           font-size: 12px;
         }
-        .succes-btn {
+        .kl-succes-btn {
           background-color: #43cb83;
           width: 205px;
           color: #fff;
         }
-        .default-btn {
+        .kl-default-btn {
           background-color: #fff;
           width: 105px;
           border: 1px solid black;
@@ -148,7 +152,7 @@
       }
     }
   }
-  .additionalMenu {
+  .kl-additionalMenu {
     display: flex;
     margin-top: 20px;
     padding: 0 10vw;
@@ -164,10 +168,10 @@
       }
     }
   }
-  .bodyCust {
+  .kl-bodyCust {
+    flex-grow: 1;
     background-color: #eff0f4;
     position: relative;
-    min-height: calc(~"100vh - 223px");
     display: flex;
     padding: 30px 10vw 30px 10vw;
     &.kl-direction-column {
@@ -180,23 +184,23 @@
       padding: 20px;
       font-size: 12px;
       flex-basis: 40%;
-      .messageInputBox {
+      .kl-messageInputBox {
         box-shadow: 4px 8px 18px 0px rgba(173, 178, 199, 0.62);
         border-radius: 21px;
         padding: 10px;
-        .messageHeaderButtons {
+        .kl-messageHeaderButtons {
           display: flex;
           align-items: center;
           .btn {
             padding: 4px 9px;
           }
         }
-        .noBorder {
+        .kl-noBorder {
           border: none;
           padding: 10px;
         }
       }
-      .item {
+      .kl-item {
         margin-bottom: 10px;
         &.radioBlock {
           input {
@@ -239,7 +243,7 @@
         &.fourItems {
           flex-wrap: wrap;
           justify-content: space-around;
-          .item {
+          .kl-item {
             margin-right: 0;
             &.left {
               margin-left: 10px;
@@ -254,7 +258,7 @@
         &.flex {
           display: flex;
           width: 100%;
-          .item {
+          .kl-item {
             flex-basis: 48%;
             &:first-of-type {
               margin-right: 10px;
@@ -347,7 +351,7 @@
               margin-left: 30px;
             }
           }
-          .positions {
+          .kl-positions {
             display: flex;
             flex-wrap: wrap;
             div {
@@ -445,7 +449,7 @@
         }
       }
     }
-    .view {
+    .kl-view {
       margin-left: 30px;
       border-radius: 10px;
       background-color: #ffffff;
@@ -499,7 +503,7 @@
           }
         }
       }
-      .header {
+      .kl-header {
         background-color: #4f5362;
         border-radius: 10px 10px 0px 0px;
         padding: 3px 10px;
@@ -542,6 +546,35 @@
             position: absolute;
             bottom: 20px;
           }
+          button {
+            position: relative;
+            margin: 0 1px;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #bdbdbd;
+            background-color: transparent;
+            &.active {
+              border-color: #2ab9ff;
+              g,
+              path,
+              polygon {
+                fill: #2ab9ff;
+              }
+            }
+          }
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            width: 20px;
+            height: 20px;
+          }
         }
         .message {
           padding: 0 20px;
@@ -556,9 +589,9 @@
             width: 100%;
             padding: 0;
             &.needTopPosition {
-              top: 0;
+              margin-bottom: auto;
             }
-            .messCont {
+            .kl-messCont {
               position: relative;
               display: flex;
               align-items: center;
@@ -569,7 +602,7 @@
                 right: 10px;
                 color: #fff;
               }
-              .messheader {
+              .kl-messheader {
                 align-items: center;
                 margin-right: 10px;
                 .text {
@@ -609,13 +642,10 @@
               }
             }
           }
-          .messCont {
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            border-radius: 10px;
+          .kl-messCont {
             background-color: #df2d24;
             padding: 20px;
-            .messheader {
+            .kl-messheader {
               display: flex;
               align-items: flex-start;
               justify-content: space-between;
@@ -626,7 +656,7 @@
                 font-weight: 600;
               }
             }
-            .messbody {
+            .kl-messbody {
               .text {
                 span {
                   color: rgba(255, 255, 255, .5);
@@ -661,7 +691,7 @@
                 }
               }
             }
-            .messfooter {
+            .kl-messfooter {
               color: rgba(255, 255, 255, .5);
               font-size: 10px;
               margin-top: 20px;
@@ -760,8 +790,7 @@
       }
     }
   }
-  .footer {
-    height: 19px;
+  .kl-footer {
     text-align: center;
     background-color: #eff0f4;
     color: #9ca3ad;
@@ -769,48 +798,48 @@
 }
 
 @media (max-width: 1600px) {
-  .customContainer .bodyCust .settings {
+  .kl-customContainer .kl-bodyCust .settings {
     flex-basis: 50%;
   }
 
-  .customContainer .bodyCust .view {
+  .kl-customContainer .kl-bodyCust .kl-view {
     flex-basis: 50%;
   }
 
-  .customContainer .bodyCust .view .thankYou .thanksContainer .image img {
+  .kl-customContainer .kl-bodyCust .kl-view .thankYou .thanksContainer .image img {
     max-width: 120px;
   }
 
-  .customContainer .bodyCust .view .thankYou .thanksContainer .text .textHeader {
+  .kl-customContainer .kl-bodyCust .kl-view .thankYou .thanksContainer .text .textHeader {
     font-size: 40px;
   }
 
-  .customContainer .bodyCust .view .thankYou .thanksContainer .text .textBody {
+  .kl-customContainer .kl-bodyCust .kl-view .thankYou .thanksContainer .text .textBody {
     font-size: 18px;
   }
 }
 
 @media (max-width: 1400px) {
-  .customContainer .bodyCust .toolbar {
+  .kl-customContainer .kl-bodyCust .toolbar {
     width: 20px;
   }
 
-  .customContainer .bodyCust .view .body .offer .offerHeader {
+  .kl-customContainer .kl-bodyCust .kl-view .body .offer .offerHeader {
     font-size: 40px;
   }
 
-  .customContainer .bodyCust {
+  .kl-customContainer .kl-bodyCust {
     padding: 20px 30px 20px 30px;
   }
 
-  .customContainer {
-    .headerCust .header {
+  .kl-customContainer {
+    .kl-headerCust .kl-header {
       padding: 10px 30px;
     }
-    .headerCust .logoAndBut {
+    .kl-headerCust .kl-logoAndBut {
       padding: 10px 30px;
     }
-    .additionalMenu {
+    .kl-additionalMenu {
       padding: 0 30px;
     }
   }

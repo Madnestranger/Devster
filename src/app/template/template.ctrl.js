@@ -25,40 +25,44 @@ export class TemplateController {
 
     // Url buttons (BEHAVIOR & TARGETING RULES)
 
-    $('body')
+    $('.kl-settings-title').on('click', function () {
 
-      .on('click', '.kl-settings-title', function () {
+      $(this).toggleClass('closed')
+        .siblings('.kl-settings-content').stop(true).slideToggle();
 
-        $(this).toggleClass('closed')
-          .siblings('.kl-settings-content').stop(true).slideToggle();
+    });
 
-      })
+    $('.kl-settings-content-block__add').on('click', function () {
 
-      .on('click', '.kl-settings-content-block__add', function () {
+      $('.kl-settings-content-url-block').stop(true).slideToggle();
 
-        $('.kl-settings-content-url-block').stop(true).slideToggle();
+    });
 
-      })
+    $('.kl-settings-drop-block button').on('click', function () {
 
-      .on('click', '.kl-settings-drop-block button', function () {
-        $(this)
-          .toggleClass('active')
-            .siblings('.kl-settings-drop-down-block')
-              .stop(true).slideToggle();
-      })
+      $(this)
+        .toggleClass('active')
+          .siblings('.kl-settings-drop-down-block')
+            .stop(true).slideToggle();
 
-      .on('click', '.kl-settings-drop-down-block label', function () {
-        $(this).parents('.kl-settings-drop-block')
-          .find('.kl-settings-drop-input').val($(this).find('input').val())
-            .siblings('.kl-settings-drop-down-block').stop(true).slideUp()
-              .siblings('.kl-settings-drop-button').removeClass('active')
-                .find('.kl-settings-drop-button-name').text($(this).find('span').text());
-      })
+    });
 
-      .on('click', '.kl-settings-content-label', function () {
-        $(this).toggleClass('active')
-          .siblings('.kl-settings-content-label-block').stop(true).slideToggle();
-      })
+    $('.kl-settings-drop-down-block label').on('click', function () {
+
+      $(this).parents('.kl-settings-drop-block')
+        .find('.kl-settings-drop-input').val($(this).find('input').val())
+          .siblings('.kl-settings-drop-down-block').stop(true).slideUp()
+            .siblings('.kl-settings-drop-button').removeClass('active')
+              .find('.kl-settings-drop-button-name').text($(this).find('span').text());
+
+    });
+
+    $('.kl-settings-content-label').on('click', function () {
+
+      $(this).toggleClass('active')
+        .siblings('.kl-settings-content-label-block').stop(true).slideToggle();
+
+    })
 
 
 
