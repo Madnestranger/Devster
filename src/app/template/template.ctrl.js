@@ -62,9 +62,30 @@ export class TemplateController {
       $(this).toggleClass('active')
         .siblings('.kl-settings-content-label-block').stop(true).slideToggle();
 
-    })
+    });
 
 
+    // Testing popup functions
+
+    $('.kl-create-test-btn').on('click', function () {
+        $('.kl-headerCust').addClass('modal-opened');
+        $('.kl-create-test-menu-wrap').show();
+    });
+
+    $('.kl-create-test-menu-wrap').on('click', function (e) {
+        if (!$(e.target).closest('.kl-create-test-menu').length) {
+            $('.kl-headerCust').removeClass('modal-opened');
+            $('.kl-create-test-menu-wrap').hide();
+        }
+        e.stopPropagation();
+    });
+
+
+    // kl-start-test-btn
+
+    $('body').on('click', '.kl-start-test-btn', function () {
+       $(this).toggleClass('active');
+    });
 
 
   }

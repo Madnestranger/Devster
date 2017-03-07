@@ -28,9 +28,15 @@
     color: #fff;
   }
   .kl-headerCust {
+    position: relative;
+    &.modal-opened {
+      .kl-header {
+        z-index: 1;
+      }
+    }
     .kl-header {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       padding: 10px 10vw;
       font-size: 13px;
       font-family: 'Montserrat', sans-serif;
@@ -122,13 +128,16 @@
       }
     }
     .kl-logoAndBut {
+      position: relative;
       padding: 10px 10vw;
       margin-top: 20px;
       display: flex;
-      position: relative;
       justify-content: space-between;
       align-items: center;
       min-height: 62px;
+      &.modal-open {
+        //z-index: 3;
+      }
       .kl-logo {
 
       }

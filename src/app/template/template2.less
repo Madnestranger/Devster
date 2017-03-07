@@ -58,7 +58,212 @@
     border-bottom: 6px solid #4f5362;
   }
 }
+.kl-create-test-menu-wrap {
+  display: none;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-235px);
+  -moz-transform: translateX(-235px);
+  -ms-transform: translateX(-235px);
+  -o-transform: translateX(-235px);
+  transform: translateX(-235px);
+  width: 350px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100000%;
+    height: 100000%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, y);
+    background-color: #232329;
+    opacity: .6;
+  }
+  .kl-settings-drop-block {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.kl-create-test-menu {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 28px 57px rgba(0,0,0,.17);
+  -webkit-box-shadow: 0 28px 57px rgba(0,0,0,.17);
+  box-shadow: 0 28px 57px rgba(0,0,0,.17);
+  padding: 15px;
+}
+.kl-save-test-btn {
+  text-transform: uppercase;
+  background-color: #43cb83;
+  color: #ffffff;
+  width: 200px;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  &:hover {
+    background-color: #f32157;
+  }
+}
+.kl-cancel-test-btn {
+  float: right;
+  text-transform: uppercase;
+  color: #4f5362;
+  border: 1px solid #4f5362 !important;
+  background-color: transparent;
+  width: 100px;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  &:hover {
+    background-color: #4f5362;
+    color: #ffffff;
+  }
+}
+
+.kl-testing-total-block {
+  &:extend(.kl-settings-total-block);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 .kl-page-title {
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.kl-page-title-text {
+  display: block;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.kl-create-testing-btn {
+  background-color: #f32157;
+  min-height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: none;
+  width: 400px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  &:hover {
+    background-color: #43cb83;
+  }
+}
+
+.kl-testing-block {
+  position: relative;
+  overflow: hidden;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  -moz-box-shadow: 0 28px 57px rgba(0,0,0,.17);
+  -webkit-box-shadow: 0 28px 57px rgba(0,0,0,.17);
+  box-shadow: 0 28px 57px rgba(0,0,0,.17);
+}
+.kl-testing-body-wrap {
+  display: flex;
+  padding: 10px 20px;
+  min-height: 95px;
+}
+.kl-testing-name-block {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-right: 20px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 15px;
+  }
+  h4 {
+    margin: 0;
+  }
+  span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    color: #bdbdbd;
+  }
+}
+.kl-start-test-btn {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  border: none;
+  background-color: transparent;
+  background-image: url(play.svg);
+  &.active {
+    background-image: url(pause.svg);
+  }
+}
+.kl-testing-stats-block {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  width: 400px;
+  background-color: #aadd22;
+}
+.kl-testing-footer-wrap {
+  display: flex;
+  padding: 10px 20px;
+  min-height: 35px;
+  background-color: #444855;
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    font-size: 11px;
+    padding: 0 15px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  a {
+    color: #ffffff;
+  }
+}
+
+
+// Media
+
+
+@media (min-width: 1401px) {
+  .kl-create-test-btn-wrap {
+    right: 10vw;
+    margin-right: 90px;
+  }
 }
