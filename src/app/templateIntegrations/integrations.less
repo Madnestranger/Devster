@@ -1,8 +1,42 @@
 .kl-customContainer .kl-bodyCust .kl-integrations {
+  height: calc(~"100vh - 284px");
   box-shadow: 14px 24px 57px 0px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   background-color: #ffffff;
   display: flex;
+  .kl-radio-cont {
+    label {
+      display: flex;
+      span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        margin-right: 10px;
+        position: relative;
+        i {
+          position: absolute;
+          display: none;
+          font-size: 10px;
+          left: 3.5px;
+          top: 3.5px;
+          color: #fff;
+        }
+      }
+    }
+    input {
+      display: none;
+      &:checked + label {
+        span {
+          border: 1px solid #43cb83;
+          background-color: #43cb83;
+          i {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
   width: 100%;
   .kl-menu-first-level {
     color: #fff;
@@ -205,12 +239,15 @@
   .kl-account {
     min-width: 600px;
     width: 60vw;
+    &.kl-leads {
+      width: 100% !important;
+    }
     input {
       border-radius: 20px;
       border: 1px solid #d9d9d9;
       padding: 7px 10px;
       color: #4f5362;
-      min-width: 400px;
+      min-width: 320px;
     }
     select {
       border-radius: 30px;
@@ -245,39 +282,6 @@
     #klAccountNotifications {
       padding: 20px;
       .kl-notifications-radios-container {
-        .kl-radio-cont {
-          label {
-            display: flex;
-            span {
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              border: 1px solid #000;
-              margin-right: 10px;
-              position: relative;
-              i {
-                position: absolute;
-                display: none;
-                font-size: 10px;
-                left: 3.5px;
-                top: 3.5px;
-                color: #fff;
-              }
-            }
-          }
-          input {
-            display: none;
-            &:checked + label {
-              span {
-                border: 1px solid #43cb83;
-                background-color: #43cb83;
-                i {
-                  display: inline-block;
-                }
-              }
-            }
-          }
-        }
       }
     }
     #klBilling {
@@ -303,7 +307,7 @@
           text-align: center;
           font-size: 32px;
           font-weight: 700;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
         .kl-billing-choice-buttons {
           display: flex;
@@ -522,5 +526,165 @@
         }
       }
     }
+  }
+  .kl-leads {
+    .kl-leads-header {
+      display: flex;
+      padding: 10px 30px;
+      background-color: #eff0f4;
+      .kl-leads-header-items {
+        padding: 10px;
+        font-size: 12px;
+        border: 1px solid #d9d9d9;
+        margin-right: 20px;
+        border-radius: 20px;
+      }
+    }
+    .kl-leads-table {
+      padding: 10px 20px;
+      .kl-table-with-checkbox {
+        flex-basis: 5%;
+      }
+      .kl-table-handled {
+        flex-basis: 10%;
+        display: flex;
+        .glyphicon-ok {
+          color: #43cb83;
+        }
+        .kl-handled-icon-custom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          background-color: #000;
+          padding: 0 0.2px 0.02px 0;
+          i {
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background-color: #fff;
+          }
+        }
+      }
+      .kl-table-date {
+        flex-basis: 25%;
+      }
+      .kl-table-campaign {
+        flex-basis: 50%;
+      }
+      .kl-table-source {
+        flex-basis: 10%;
+      }
+      .kl-leads-table-header {
+        display: flex;
+        padding: 10px 5px;
+        border-bottom: 1px solid black;
+        .kl-leads-table-header-item {
+        }
+      }
+      .kl-leads-table-body {
+        .kl-leads-table-body-item {
+          transition: all 0.3s ease;
+          background-color: #f6f6f7;
+          &[aria-expanded=false], &:not([aria-expanded]) {
+            background-color: #fff;
+            .kl-collapse-the-item {
+              display: none !important;
+            }
+          }
+          .kl-leads-table-body-item-table-view {
+            display: flex;
+            position: relative;
+            padding: 10px 5px;
+            .kl-collapse-the-item {
+              position: absolute;
+              right: 10px;
+              display: inline-block;
+            }
+          }
+          .kl-leads-table-body-item-expanded {
+            .kl-leads-table-body-item-expanded-container {
+              display: flex;
+              .kl-space {
+                flex-basis: 15%;
+              }
+              .kl-leads-table-body-item-expanded-body {
+                flex-basis: 75%;
+                .kl-leads-item-expanded-header {
+                  padding: 10px;
+                  a {
+                    padding: 5px 0;
+                    margin-right: 20px;
+                    color: #a8acb9;
+                    text-decoration: none;
+                    &.active {
+                      color: #000;
+                      font-weight: 700;
+                      border-bottom: 1px solid #2ab9ff;
+                    }
+                  }
+                }
+                .kl-leads-item-expanded-body {
+                  .tab-pane {
+                    padding-bottom: 20px;
+                    .kl-tabpanel-items {
+                      min-height: 160px;
+                    }
+                  }
+                  .kl-tabpanel-item {
+                    display: flex;
+                    padding: 10px 0;
+                    .kl-tabpanel-title {
+                      width: 150px;
+                      color: #000;
+                      font-weight: 700;
+                    }
+                    .kl-tabpanel-value {
+                      color: #4f5362;
+                    }
+                  }
+                  .kl-tabpanel-footer {
+                    padding-top: 15px;
+                    border-top: 1px solid #a8acb9;
+                    button {
+                      border-radius: 20px;
+                      border: 1px solid #4f5362;
+                      padding: 5px 10px;
+                      background-color: transparent;
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .kl-customContainer .kl-bodyCust .kl-integrations .kl-account #klBilling .kl-billing-main-box {
+    padding: 10px 0;
+  }
+
+  .kl-customContainer .kl-bodyCust .kl-integrations {
+    height: calc(~"100vh - 184px");
+  }
+
+  .kl-customContainer .kl-bodyCust .kl-integrations .kl-account #klBilling .kl-billing-main-box .kl-billing-plans .kl-billing-plan .kl-plan-all .kl-plan-description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .kl-customContainer .kl-bodyCust .kl-integrations .kl-content-container, .kl-customContainer .kl-bodyCust .kl-integrations .kl-automation-twilio-container {
+    min-width: 500px;
+  }
+
+  .kl-customContainer .kl-bodyCust .kl-integrations .kl-menu-second-level, .kl-customContainer .kl-bodyCust .kl-integrations .kl-menu-first-level {
+    max-width: 25vw;
   }
 }
