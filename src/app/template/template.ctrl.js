@@ -13,6 +13,37 @@ export class TemplateController {
     this.rightPositionBar = false;
     this.needRight = false;
 
+    // var ctx = document.getElementById("myChart");
+    // var myChart = new Chart(ctx, {
+    //   type: 'line',
+    //   data: {
+    //     datasets: [{
+    //       label: 'Scatter Dataset',
+    //       data: [{
+    //         x: -10,
+    //         y: 0
+    //       }, {
+    //         x: 0,
+    //         y: 10
+    //       }, {
+    //         x: 10,
+    //         y: 5
+    //       }]
+    //     }]
+    //   },
+    //   options: {
+    //     scales: {
+    //       xAxes: [{
+    //         type: 'linear',
+    //         position: 'bottom'
+    //       }]
+    //     }
+    //   }
+    // });
+    // var element = document.querySelector('.chart');
+    // new EasyPieChart(element, {
+    //   // your options goes here
+    // });
 
     $('#navTabs a').click(function (e) {
       e.preventDefault();
