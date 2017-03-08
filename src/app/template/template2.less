@@ -249,11 +249,14 @@
     width: 50px;
     height: 50px;
     border-width: 4px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .kl-chart-text {
     font-size: 10px;
     color: #a3a8b2;
+  }
+  .kl-chart-red-text {
+    color: #e21c1c;
   }
   .kl-chart-title {
     font-size: 9px;
@@ -373,6 +376,25 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+  }
+  .kl-dynamic-chart {
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    canvas {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 65px;
+      height: 65px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

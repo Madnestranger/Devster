@@ -13,37 +13,6 @@ export class TemplateController {
     this.rightPositionBar = false;
     this.needRight = false;
 
-    // var ctx = document.getElementById("myChart");
-    // var myChart = new Chart(ctx, {
-    //   type: 'line',
-    //   data: {
-    //     datasets: [{
-    //       label: 'Scatter Dataset',
-    //       data: [{
-    //         x: -10,
-    //         y: 0
-    //       }, {
-    //         x: 0,
-    //         y: 10
-    //       }, {
-    //         x: 10,
-    //         y: 5
-    //       }]
-    //     }]
-    //   },
-    //   options: {
-    //     scales: {
-    //       xAxes: [{
-    //         type: 'linear',
-    //         position: 'bottom'
-    //       }]
-    //     }
-    //   }
-    // });
-    // var element = document.querySelector('.chart');
-    // new EasyPieChart(element, {
-    //   // your options goes here
-    // });
 
     $('#navTabs a').click(function (e) {
       e.preventDefault();
@@ -123,6 +92,52 @@ export class TemplateController {
 
     $('body').on('click', '.kl-start-test-btn', function () {
        $(this).toggleClass('active');
+    });
+
+
+
+    // var ctx = document.getElementById("myChart");
+    // var myChart = new Chart(ctx, {
+    //   type: 'line',
+    //   data: {
+    //       datasets: [{
+    //           label: 'Scatter Dataset',
+    //           data: [{
+    //               x: -10,
+    //               y: 0
+    //           }, {
+    //               x: 0,
+    //               y: 10
+    //           }, {
+    //               x: 10,
+    //               y: 5
+    //           }]
+    //       }]
+    //   },
+    //   options: {
+    //       scales: {
+    //           xAxes: [{
+    //               type: 'linear',
+    //               position: 'bottom'
+    //           }]
+    //       }
+    //   }
+    // });
+
+    var element = document.querySelector('.chart');
+    new EasyPieChart(element, {
+      lineWidth: 3,
+      size: 50,
+      barColor: '#9ba1ad',
+      trackColor: '#eff0f4'
+    });
+
+    var element = document.querySelector('.chart2');
+    new EasyPieChart(element, {
+      lineWidth: 3,
+      size: 50,
+      barColor: '#e21c1c',
+      trackColor: '#eff0f4'
     });
 
 
