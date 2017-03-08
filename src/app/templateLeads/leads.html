@@ -1,0 +1,903 @@
+<div class="kl-customContainer">
+  <div class="kl-headerCust">
+    <div class="kl-header">
+      <div class="kl-menu">
+        <a href="#" class="active">My Campaigns</a>
+        <a ui-sref="templateTesting">A/B Testing</a>
+        <a href="#">Statistics</a>
+        <a href="#">Leads</a>
+      </div>
+      <div class="user">
+        <a href="#" class="kl-user-btn">
+          <img src="app/template/default-profile.png" alt="image">
+          <span class="kl-user-name">Guy Lev</span>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </a>
+        <ul class="kl-user-list">
+          <li>
+            <a href="#">My account</a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Messages</span>
+              <span class="kl-messages-quantity">12</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">Notifications</a>
+          </li>
+          <li>
+            <a href="#">Privacy</a>
+          </li>
+          <li>
+            <a href="#">Billing</a>
+          </li>
+          <li>
+            <a href="#">Log out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="kl-logoAndBut">
+      <div class="kl-logo">
+        <img src="app/template/Logo.png" alt="logo">
+      </div>
+      <div class="kl-buttons">
+        <button class="kl-succes-btn">SAVE AND PROCEED</button>
+        <button class="kl-default-btn">BACK</button>
+      </div>
+    </div>
+  </div>
+  <div class="kl-bodyCust">
+    <div class="kl-integrations">
+      <div class="kl-menu-first-level kl-account-first-level">
+        <div class="kl-first-level-header">
+          <div class="kl-title">
+            Leads
+          </div>
+          <div class="kl-text">
+            You can mark lead as handled, delete or export all leads to csv.
+          </div>
+        </div>
+        <div class="kl-first-level-menu-items" id="navTabs">
+          <a class="kl-first-level-item" aria-controls="klLeadsDashboard" role="tab" data-toggle="tab"
+             href="#klLeadsDashboard">
+            Leads Dashboard
+          </a>
+          <a class="kl-first-level-item" aria-controls="klRecycleBin" role="tab" data-toggle="tab"
+             href="#klRecycleBin">
+            Recycle Bin
+          </a>
+        </div>
+      </div>
+      <div class="kl-account tab-content kl-leads">
+        <div id="klLeadsDashboard" role="tabpanel" class="tab-pane">
+          <div class="kl-leads-header">
+            <div class="kl-leads-header-items">
+              Mark as Handled
+            </div>
+            <div class="kl-leads-header-items">
+              Mark as Unhandled
+            </div>
+            <div class="kl-leads-header-items">
+              Export to CSV
+            </div>
+            <div class="kl-leads-header-items">
+              Delete
+            </div>
+          </div>
+          <div class="kl-leads-table">
+            <div class="kl-leads-table-header">
+              <div class="kl-table-with-checkbox">
+                <div class="kl-radio-cont">
+                  <input type="radio" id="checkAll"><label for="checkAll"><span><i
+                  class="glyphicon glyphicon-ok"></i></span></label>
+                </div>
+              </div>
+              <div class="kl-table-handled">HANDLED</div>
+              <div class="kl-table-date">DATE</div>
+              <div class="kl-table-campaign">CAMPAIGN</div>
+              <div class="kl-table-source">SOURCE</div>
+            </div>
+            <div class="kl-leads-table-body">
+              <div class="kl-leads-table-body-item" data-toggle="collapse" data-target="#firstTableItem">
+                <div class="kl-leads-table-body-item-table-view">
+                  <div class="kl-table-with-checkbox" onclick="event.stopPropagation();">
+                    <div class="kl-radio-cont">
+                      <input type="radio" id="first" name="tableItems"><label for="first"><span><i
+                      class="glyphicon glyphicon-ok"></i></span></label>
+                    </div>
+                  </div>
+                  <div class="kl-table-handled"><i class="glyphicon glyphicon-ok"></i></div>
+                  <div class="kl-table-date">09/15/2016 06:36:08 PM</div>
+                  <div class="kl-table-campaign">My Awesome Campaign Name</div>
+                  <div class="kl-table-source">Direct</div>
+                  <div class="kl-collapse-the-item"><i class="glyphicon glyphicon-chevron-up"></i></div>
+                </div>
+                <div class="kl-leads-table-body-item-expanded collapse" id="firstTableItem"
+                     onclick="event.stopPropagation();">
+                  <div class="kl-leads-table-body-item-expanded-container">
+                    <div class="kl-space"></div>
+                    <div class="kl-leads-table-body-item-expanded-body">
+                      <div class="kl-leads-item-expanded-header" id="expandedTabs">
+                        <a href="#leadDataExpanded" aria-controls="leadDataExpanded" role="tab" data-toggle="tab">Lead
+                          Data</a>
+                        <a href="#visitorDataExpanded" aria-controls="visitorDataExpanded" role="tab" data-toggle="tab">Visitor
+                          Data</a>
+                        <a href="#sourceDataExpanded" aria-controls="sourceDataExpanded" role="tab" data-toggle="tab">Source
+                          Data</a>
+                      </div>
+                      <div class="kl-leads-item-expanded-body tab-content">
+                        <div role="tabpanel" class="tab-pane" id="leadDataExpanded">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                First Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                John
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Last Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Wick
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Email:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                johnwick@gmail.com
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Phone Number:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                180671029670912761
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="visitorDataExpanded">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Browser Type:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+                                Chrome/53.0.2785.89 Safari/537.36
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Screen Size:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                1920 x 1080
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                IP Address:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                79.179.147.100
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sourceDataExpanded">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Page URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-came-from.com/page
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Refferal URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-enter-my-site-from.com/page
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="kl-leads-table-body-item" data-toggle="collapse" data-target="#secondTableItem">
+                <div class="kl-leads-table-body-item-table-view">
+                  <div class="kl-table-with-checkbox" onclick="event.stopPropagation();">
+                    <div class="kl-radio-cont">
+                      <input type="radio" id="second" name="tableItems"><label for="second"><span><i
+                      class="glyphicon glyphicon-ok"></i></span></label>
+                    </div>
+                  </div>
+                  <div class="kl-table-handled"><span class="kl-handled-icon-custom"><i></i></span></div>
+                  <div class="kl-table-date">09/15/2016 06:36:08 PM</div>
+                  <div class="kl-table-campaign">My Awesome Campaign Name</div>
+                  <div class="kl-table-source">Direct</div>
+                  <div class="kl-collapse-the-item"><i class="glyphicon glyphicon-chevron-up"></i></div>
+                </div>
+                <div class="kl-leads-table-body-item-expanded collapse" id="secondTableItem"
+                     onclick="event.stopPropagation();">
+                  <div class="kl-leads-table-body-item-expanded-container">
+                    <div class="kl-space"></div>
+                    <div class="kl-leads-table-body-item-expanded-body">
+                      <div class="kl-leads-item-expanded-header" id="expandedTabs1">
+                        <a href="#leadDataExpanded1" aria-controls="leadDataExpanded1" role="tab" data-toggle="tab">Lead
+                          Data</a>
+                        <a href="#visitorDataExpanded1" aria-controls="visitorDataExpanded1" role="tab" data-toggle="tab">Visitor
+                          Data</a>
+                        <a href="#sourceDataExpanded1" aria-controls="sourceDataExpanded1" role="tab" data-toggle="tab">Source
+                          Data</a>
+                      </div>
+                      <div class="kl-leads-item-expanded-body tab-content">
+                        <div role="tabpanel" class="tab-pane" id="leadDataExpanded1">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                First Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                John
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Last Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Wick
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Email:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                johnwick@gmail.com
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Phone Number:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                180671029670912761
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="visitorDataExpanded1">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Browser Type:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+                                Chrome/53.0.2785.89 Safari/537.36
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Screen Size:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                1920 x 1080
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                IP Address:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                79.179.147.100
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sourceDataExpanded1">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Page URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-came-from.com/page
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Refferal URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-enter-my-site-from.com/page
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="kl-leads-table-body-item" data-toggle="collapse" data-target="#thirdtTableItem">
+                <div class="kl-leads-table-body-item-table-view">
+                  <div class="kl-table-with-checkbox" onclick="event.stopPropagation();">
+                    <div class="kl-radio-cont">
+                      <input type="radio" id="third" name="tableItems"><label for="third"><span><i
+                      class="glyphicon glyphicon-ok"></i></span></label>
+                    </div>
+                  </div>
+                  <div class="kl-table-handled"><i class="glyphicon glyphicon-ok"></i></div>
+                  <div class="kl-table-date">09/15/2016 06:36:08 PM</div>
+                  <div class="kl-table-campaign">My Awesome Campaign Name</div>
+                  <div class="kl-table-source">Direct</div>
+                  <div class="kl-collapse-the-item"><i class="glyphicon glyphicon-chevron-up"></i></div>
+                </div>
+                <div class="kl-leads-table-body-item-expanded collapse" id="thirdtTableItem"
+                     onclick="event.stopPropagation();">
+                  <div class="kl-leads-table-body-item-expanded-container">
+                    <div class="kl-space"></div>
+                    <div class="kl-leads-table-body-item-expanded-body">
+                      <div class="kl-leads-item-expanded-header" id="expandedTabs2">
+                        <a href="#leadDataExpanded2" aria-controls="leadDataExpanded2" role="tab" data-toggle="tab">Lead
+                          Data</a>
+                        <a href="#visitorDataExpanded2" aria-controls="visitorDataExpanded2" role="tab" data-toggle="tab">Visitor
+                          Data</a>
+                        <a href="#sourceDataExpanded2" aria-controls="sourceDataExpanded2" role="tab" data-toggle="tab">Source
+                          Data</a>
+                      </div>
+                      <div class="kl-leads-item-expanded-body tab-content">
+                        <div role="tabpanel" class="tab-pane" id="leadDataExpanded2">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                First Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                John
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Last Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Wick
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Email:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                johnwick@gmail.com
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Phone Number:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                180671029670912761
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="visitorDataExpanded2">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Browser Type:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+                                Chrome/53.0.2785.89 Safari/537.36
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Screen Size:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                1920 x 1080
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                IP Address:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                79.179.147.100
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sourceDataExpanded2">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Page URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-came-from.com/page
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Refferal URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-enter-my-site-from.com/page
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="kl-leads-table-body-item" data-toggle="collapse" data-target="#fourthTableItem">
+                <div class="kl-leads-table-body-item-table-view">
+                  <div class="kl-table-with-checkbox" onclick="event.stopPropagation();">
+                    <div class="kl-radio-cont">
+                      <input type="radio" id="fourth" name="tableItems"><label for="fourth"><span><i
+                      class="glyphicon glyphicon-ok"></i></span></label>
+                    </div>
+                  </div>
+                  <div class="kl-table-handled"><i class="glyphicon glyphicon-ok"></i></div>
+                  <div class="kl-table-date">09/15/2016 06:36:08 PM</div>
+                  <div class="kl-table-campaign">My Awesome Campaign Name</div>
+                  <div class="kl-table-source">Direct</div>
+                  <div class="kl-collapse-the-item"><i class="glyphicon glyphicon-chevron-up"></i></div>
+                </div>
+                <div class="kl-leads-table-body-item-expanded collapse" id="fourthTableItem"
+                     onclick="event.stopPropagation();">
+                  <div class="kl-leads-table-body-item-expanded-container">
+                    <div class="kl-space"></div>
+                    <div class="kl-leads-table-body-item-expanded-body">
+                      <div class="kl-leads-item-expanded-header" id="expandedTabs3">
+                        <a href="#leadDataExpanded3" aria-controls="leadDataExpanded3" role="tab" data-toggle="tab">Lead
+                          Data</a>
+                        <a href="#visitorDataExpanded3" aria-controls="visitorDataExpanded3" role="tab" data-toggle="tab">Visitor
+                          Data</a>
+                        <a href="#sourceDataExpanded3" aria-controls="sourceDataExpanded3" role="tab" data-toggle="tab">Source
+                          Data</a>
+                      </div>
+                      <div class="kl-leads-item-expanded-body tab-content">
+                        <div role="tabpanel" class="tab-pane" id="leadDataExpanded3">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                First Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                John
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Last Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Wick
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Email:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                johnwick@gmail.com
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Phone Number:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                180671029670912761
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="visitorDataExpanded3">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Browser Type:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+                                Chrome/53.0.2785.89 Safari/537.36
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Screen Size:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                1920 x 1080
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                IP Address:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                79.179.147.100
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sourceDataExpanded3">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Page URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-came-from.com/page
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Refferal URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-enter-my-site-from.com/page
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="kl-leads-table-body-item" data-toggle="collapse" data-target="#fifthTableItem">
+                <div class="kl-leads-table-body-item-table-view">
+                  <div class="kl-table-with-checkbox" onclick="event.stopPropagation();">
+                    <div class="kl-radio-cont">
+                      <input type="radio" id="fifth" name="tableItems"><label for="fifth"><span><i
+                      class="glyphicon glyphicon-ok"></i></span></label>
+                    </div>
+                  </div>
+                  <div class="kl-table-handled"><i class="glyphicon glyphicon-ok"></i></div>
+                  <div class="kl-table-date">09/15/2016 06:36:08 PM</div>
+                  <div class="kl-table-campaign">My Awesome Campaign Name</div>
+                  <div class="kl-table-source">Direct</div>
+                  <div class="kl-collapse-the-item"><i class="glyphicon glyphicon-chevron-up"></i></div>
+                </div>
+                <div class="kl-leads-table-body-item-expanded collapse" id="fifthTableItem"
+                     onclick="event.stopPropagation();">
+                  <div class="kl-leads-table-body-item-expanded-container">
+                    <div class="kl-space"></div>
+                    <div class="kl-leads-table-body-item-expanded-body">
+                      <div class="kl-leads-item-expanded-header" id="expandedTabs4">
+                        <a href="#leadDataExpanded4" aria-controls="leadDataExpanded4" role="tab" data-toggle="tab">Lead
+                          Data</a>
+                        <a href="#visitorDataExpanded4" aria-controls="visitorDataExpanded4" role="tab" data-toggle="tab">Visitor
+                          Data</a>
+                        <a href="#sourceDataExpanded4" aria-controls="sourceDataExpanded4" role="tab" data-toggle="tab">Source
+                          Data</a>
+                      </div>
+                      <div class="kl-leads-item-expanded-body tab-content">
+                        <div role="tabpanel" class="tab-pane" id="leadDataExpanded4">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                First Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                John
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Last Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Wick
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Email:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                johnwick@gmail.com
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Phone Number:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                180671029670912761
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="visitorDataExpanded4">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Browser Type:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+                                Chrome/53.0.2785.89 Safari/537.36
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Screen Size:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                1920 x 1080
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                IP Address:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                79.179.147.100
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sourceDataExpanded4">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Page URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-came-from.com/page
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Refferal URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-enter-my-site-from.com/page
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="klRecycleBin" role="tabpanel" class="tab-pane">
+          <div class="kl-leads-header">
+            <div class="kl-leads-header-items">
+              Erase All
+            </div>
+            <div class="kl-leads-header-items">
+              Erase Selected
+            </div>
+            <div class="kl-leads-header-items">
+              Restore Selected
+            </div>
+          </div>
+          <div class="kl-leads-table">
+            <div class="kl-leads-table-header">
+              <div class="kl-table-with-checkbox">
+                <div class="kl-radio-cont">
+                  <input type="radio" id="checkAll1"><label for="checkAll1"><span><i
+                  class="glyphicon glyphicon-ok"></i></span></label>
+                </div>
+              </div>
+              <div class="kl-table-handled">HANDLED</div>
+              <div class="kl-table-date">DATE</div>
+              <div class="kl-table-campaign">CAMPAIGN</div>
+              <div class="kl-table-source">SOURCE</div>
+            </div>
+            <div class="kl-leads-table-body">
+              <div class="kl-leads-table-body-item" data-toggle="collapse" data-target="#firstTableItem13">
+                <div class="kl-leads-table-body-item-table-view">
+                  <div class="kl-table-with-checkbox" onclick="event.stopPropagation();">
+                    <div class="kl-radio-cont">
+                      <input type="radio" id="first1" name="tableItems"><label for="first1"><span><i
+                      class="glyphicon glyphicon-ok"></i></span></label>
+                    </div>
+                  </div>
+                  <div class="kl-table-handled"><i class="glyphicon glyphicon-ok"></i></div>
+                  <div class="kl-table-date">09/15/2016 06:36:08 PM</div>
+                  <div class="kl-table-campaign">My Awesome Campaign Name</div>
+                  <div class="kl-table-source">Direct</div>
+                  <div class="kl-collapse-the-item"><i class="glyphicon glyphicon-chevron-up"></i></div>
+                </div>
+                <div class="kl-leads-table-body-item-expanded collapse" id="firstTableItem13"
+                     onclick="event.stopPropagation();">
+                  <div class="kl-leads-table-body-item-expanded-container">
+                    <div class="kl-space"></div>
+                    <div class="kl-leads-table-body-item-expanded-body">
+                      <div class="kl-leads-item-expanded-header" id="expandedTabs13">
+                        <a href="#leadDataExpanded13" aria-controls="leadDataExpanded13" role="tab" data-toggle="tab">Lead
+                          Data</a>
+                        <a href="#visitorDataExpanded13" aria-controls="visitorDataExpanded13" role="tab" data-toggle="tab">Visitor
+                          Data</a>
+                        <a href="#sourceDataExpanded13" aria-controls="sourceDataExpanded13" role="tab" data-toggle="tab">Source
+                          Data</a>
+                      </div>
+                      <div class="kl-leads-item-expanded-body tab-content">
+                        <div role="tabpanel" class="tab-pane" id="leadDataExpanded13">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                First Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                John
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Last Name:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Wick
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Email:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                johnwick@gmail.com
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Phone Number:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                180671029670912761
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="visitorDataExpanded13">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Browser Type:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
+                                Chrome/53.0.2785.89 Safari/537.36
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Screen Size:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                1920 x 1080
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                IP Address:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                79.179.147.100
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sourceDataExpanded13">
+                          <div class="kl-tabpanel-items">
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Page URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-came-from.com/page
+                              </div>
+                            </div>
+                            <div class="kl-tabpanel-item">
+                              <div class="kl-tabpanel-title">
+                                Refferal URL:
+                              </div>
+                              <div class="kl-tabpanel-value">
+                                http://www.lead-enter-my-site-from.com/page
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kl-tabpanel-footer">
+                            <button class="kl-default-button">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="kl-footer">
+    <span>Kicklander &reg;</span>
+  </div>
+</div>

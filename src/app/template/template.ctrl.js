@@ -21,6 +21,48 @@ export class TemplateController {
       $(this).addClass('active');
     });
 
+    $('#expandedTabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      $('#expandedTabs a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('#expandedTabs1 a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      $('#expandedTabs1 a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('#expandedTabs2 a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      $('#expandedTabs2 a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('#expandedTabs3 a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      $('#expandedTabs3 a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('#expandedTabs4 a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      $('#expandedTabs4 a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('#expandedTabs13 a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+      $('#expandedTabs13 a').removeClass('active');
+      $(this).addClass('active');
+    });
+
     // User toggle button
 
     $('.kl-user-btn').on('click', function (e) {

@@ -55,6 +55,12 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
       controller: 'TemplateController',
       controllerAs: 'ctrl'
     })
+    .state('templateLeads', {
+      url: '/template/leads',
+      templateUrl: 'app/templateLeads/leads.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
     .state('templateTesting2', {
       url: '/template/testing2',
       templateUrl: 'app/templateTesting/testing2.html',
