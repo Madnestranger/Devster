@@ -54,6 +54,18 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/templateTesting/testing2.html',
       controller: 'TemplateController',
       controllerAs: 'ctrl'
+    })
+    .state('templateStatistics', {
+      url: '/template/statistics',
+      templateUrl: 'app/templateStatistics/statistics.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
+    })
+    .state('templateCongratulations', {
+      url: '/template/congratulations',
+      templateUrl: 'app/templateCongratulations/congratulations.html',
+      controller: 'TemplateController',
+      controllerAs: 'ctrl'
     });
 
   $urlRouterProvider.otherwise('/');

@@ -4,7 +4,7 @@
       <div class="kl-menu">
         <a href="#">My Campaigns</a>
         <a ui-sref="templateTesting" class="active">A/B Testing</a>
-        <a href="#">Statistics</a>
+        <a ui-sref="templateStatistics">Statistics</a>
         <a href="#">Leads</a>
       </div>
       <div class="user">
@@ -33,14 +33,16 @@
             <a href="#">Billing</a>
           </li>
           <li>
-            <a href="#">Log out</a>
+            <a ui-sref="templateCongratulations">Log out</a>
           </li>
         </ul>
       </div>
     </div>
     <div class="kl-logoAndBut">
       <div class="kl-logo">
-        <img src="app/template/Logo.png" alt="logo">
+          <a href="#">
+              <img src="app/template/Logo.png" alt="logo">
+          </a>
       </div>
       <div class="kl-buttons">
         <div class="kl-create-test-btn-wrap">
@@ -121,12 +123,43 @@
           </div>
           <div class="kl-testing-stats-block">
 
+            <div class="kl-chart-wrap kl-chart-visits-wrap">
+              <div class="kl-chart">
+                <span class="kl-chart-text">897k</span>
+              </div>
+              <span class="kl-chart-title">Visits</span>
+            </div>
+
+            <div class="kl-chart-wrap kl-chart-impressions-wrap">
+              <div class="kl-chart">
+                <span class="kl-chart-text">654k</span>
+              </div>
+              <span class="kl-chart-title">Impressions</span>
+            </div>
+
+            <div class="kl-chart-wrap kl-chart-platforms-wrap">
+              <div class="kl-chart">
+                <span class="kl-chart-text">3.8k</span>
+              </div>
+              <span class="kl-chart-title">Mobile views</span>
+            </div>
+
+            <div class="kl-chart-wrap">
+              <div class="chart kl-chart" data-percent="73" data-scale-color="#9ba1ad">73%</div>
+              <span class="kl-chart-title">Conversions</span>
+            </div>
+
+            <div class="kl-chart-wrap">
+              <div class="chart kl-chart" data-percent="73" data-scale-color="#ffb400">5.8%</div>
+              <span class="kl-chart-title">Conversion</span>
+            </div>
+
           </div>
         </div>
         <div class="kl-testing-footer-wrap">
           <ul>
             <li>
-              <a href="#">Statistics</a>
+              <a ui-sref="templateStatistics">Statistics</a>
             </li>
             <li>
               <a href="#">Preview</a>
